@@ -14,7 +14,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 user_csv = 'users.csv'
-ticker_df = pd.read_csv('/Users/vanshjain/Desktop/investment/Yahoo Ticker Symbols - September 2017.csv')
+ticker_df = pd.read_csv('path to ticker csv file')
 
 ticker_mapping = dict(zip(ticker_df['Ticker'], ticker_df['Name']))
 
@@ -110,7 +110,7 @@ def ticker_search():
     return jsonify(tickers)
 
 def fetch_recent_news(ticker):
-    api_key = "pub_4721106dadb19ef543008f875804cf66d8e1c"
+    api_key = "your api key"
     api = NewsDataApiClient(apikey=api_key)
     company_name = ticker_mapping.get(ticker, ticker)
 
