@@ -1,0 +1,17 @@
+pandas
+numpy 
+sklearn
+tensorflow
+keras
+yfinance
+vaderSentiment
+requests
+flask
+re
+csv
+os
+bcrypt
+datetime
+plotly
+model
+newsdataapi
