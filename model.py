@@ -9,7 +9,7 @@ import datetime
 import requests
 from newsdataapi import NewsDataApiClient
 
-ticker_df = pd.read_csv('/Users/vanshjain/Desktop/investment/Yahoo Ticker Symbols - September 2017.csv')
+ticker_df = pd.read_csv('path to ticker csv file')
 
 ticker_mapping = dict(zip(ticker_df['Ticker'], ticker_df['Name']))
 # Define candlestick patterns with the required parameters
@@ -94,7 +94,7 @@ def compute_support_resistance(data, window=100):
 
 def get_news_sentiment(ticker, start_date, end_date):
     analyzer = SentimentIntensityAnalyzer()
-    api_key = "pub_4721106dadb19ef543008f875804cf66d8e1c"
+    api_key = "your api key"
     
     # Initialize the newsdataapi client
     api = NewsDataApiClient(apikey=api_key)
