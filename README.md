@@ -76,7 +76,7 @@ stock-prediction-flask/
 │   └── prediction.html├
 ├── static/                  # Static files (CSS, JS, images)
 │   ├── css/
-        ├── styles.css
+        └── styles.css
 │ 
 ├── model.py                  # LSTM models
 ├── users.csv
