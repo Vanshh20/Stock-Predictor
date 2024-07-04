@@ -80,7 +80,7 @@ stock-prediction-flask/
 │ 
 ├── model.py                  # LSTM models
 ├── users.csv
-├── Yahoo Ticker Symbols - September 2017.csv                # Data files (CSV, etc.)
+├── Yahoo Ticker Symbols.csv                # Data files (CSV, etc.)
 ├── requirements.txt         # Python dependencies
 └── README.md                # Project description
 ```
