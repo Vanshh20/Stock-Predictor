@@ -85,6 +85,57 @@ stock-prediction-flask/
 └── README.md                # Project description
 ```
 
+# Usage Example:
+
+
+### Login:
+
+- Users can log in by entering their email and password on the login screen. If they don't have an account, they can click on the "Register" button to create one.
+  <img width="1440" alt="Screenshot 2024-07-04 at 4 26 41 PM" src="https://github.com/Vanshh20/Stock-Predictor/assets/142145536/a200bc72-1fe9-4092-b4d5-ec05dd28f355">
+
+
+### Register:
+
+- On the registration page, users need to provide their email, set a password, and confirm it. After successful registration, they can log in using their new credentials.
+  <img width="1440" alt="Screenshot 2024-07-04 at 4 26 47 PM" src="https://github.com/Vanshh20/Stock-Predictor/assets/142145536/b68215ea-990c-46f3-9225-c63a9db8bb15">
+
+### Choosing Stock from Dropdown List
+
+- After logging in, users can select a stock from the dropdown list available on the main dashboard. This list includes a wide range of stocks for users to choose from.
+  <img width="1440" alt="Screenshot 2024-07-04 at 4 28 29 PM" src="https://github.com/Vanshh20/Stock-Predictor/assets/142145536/05ad07db-9d7d-4c6b-9f19-e38e2a986112">
+
+  
+### Setting Prediction Days and Buy Price
+
+- Users can choose the number of days for the prediction. If the selected number of days is more than 7, a warning message will appear indicating that predictions might not     be accurate for longer periods.
+- The maximum number of days that can be selected is 14.
+- Users must also enter a buy price for the stock. The buy price should be within 10% up or down of the current stock price. If the buy price is out of this range, an error     message will prompt the user to enter a valid price.
+  <img width="1440" alt="Screenshot 2024-07-04 at 4 29 17 PM" src="https://github.com/Vanshh20/Stock-Predictor/assets/142145536/2ea13f1f-c88d-4e13-9b69-40b810e91d4e">
+
+
+  
+### Recommendations (Hold or Sell):
+
+- Recommendations are generated based on various factors:
+  - RSI (Relative Strength Index): Indicates whether the stock is overbought or oversold.
+  - Sentiment Analysis: Analyzes recent news and sentiment about the stock.
+  - Actual Price vs 50-day Moving Average: Compares the current stock price to its 50-day moving average to determine trends.
+  - The system will recommend whether to hold or sell the stock based on these analyses.
+    ![Screenshot 2024-07-04 at 4 30 43 PM](https://github.com/Vanshh20/Stock-Predictor/assets/142145536/7c3255af-dacf-4ede-adef-2f86abb66abd)
+
+
+  
+### Stock Chart Drawing:
+
+- The stock chart includes the following features:
+  - Pattern Generation: Identifies and highlights patterns in the stock price movements.
+  - 20-day and 50-day Moving Average Lines: Displays these lines to show short-term and medium-term trends.
+  - Dynamic Support and Resistance Lines: These lines help identify key price levels where the stock might reverse or continue its trend.
+  - Comparison between Actual Price and Predicted Price: Shows both the actual historical prices and the predicted future prices on the same chart.
+  - Recent News and Sentiment: Lists all recent news articles related to the stock and provides sentiment analysis for each article.
+    <img width="1440" alt="Screenshot 2024-07-04 at 4 35 40 PM" src="https://github.com/Vanshh20/Stock-Predictor/assets/142145536/a165b6e1-9a3a-4f81-8902-0f921f12b985">
+
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure that your code adheres to the project's coding standards and includes appropriate tests.
