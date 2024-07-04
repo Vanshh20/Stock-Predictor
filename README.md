@@ -70,13 +70,13 @@ stock-prediction-flask/
 │
 ├── app.py                   # Main application file
 ├── templates/               # HTML templates
-│   ├── 
 │   ├── register.html
 │   ├── login.html
 │   ├── index.html
-│   └── prediction.html
+│   └── prediction.html├
 ├── static/                  # Static files (CSS, JS, images)
 │   ├── css/
+        ├── styles.css
 │ 
 ├── model.py                  # LSTM models
 ├── users.csv
