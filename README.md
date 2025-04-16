@@ -53,13 +53,7 @@ This Flask application allows users to register, log in, and utilize a stock pre
     pip install -r requirements.txt
     ```
 
-4. **Set up environment variables**:
-    - Create a `.env` file in the root directory.
-    - Add your secret key and NewsData API key:
-        ```
-        SECRET_KEY=your_secret_key
-        NEWS_API_KEY=your_news_api_key
-        ```
+
 
 
 

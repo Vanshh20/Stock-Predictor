@@ -10,11 +10,13 @@ from plotly.subplots import make_subplots
 import model
 from newsdataapi import NewsDataApiClient
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import yfinance as yf
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 user_csv = 'users.csv'
-ticker_df = pd.read_csv('path to ticker csv file')
+ticker_df = pd.read_csv('Yahoo Ticker Symbols.csv')
 
 ticker_mapping = dict(zip(ticker_df['Ticker'], ticker_df['Name']))
 
@@ -110,7 +112,7 @@ def ticker_search():
     return jsonify(tickers)
 
 def fetch_recent_news(ticker):
-    api_key = "your api key"
+    api_key = "your NewsDataApi key"
     api = NewsDataApiClient(apikey=api_key)
     company_name = ticker_mapping.get(ticker, ticker)
 
@@ -142,11 +144,23 @@ def fetch_recent_news(ticker):
 @app.route('/predict/<ticker>/<int:prediction_days>')
 def predict(ticker, prediction_days):
     start_date = '2021-01-01'
-    end_date = '2024-06-26'
-    
-    # Load stock data
-    data = model.yf.download(ticker, start=start_date, end=end_date)
-    data.reset_index(inplace=True)
+    end_date = datetime.date.today().isoformat()
+
+    # Fetch stock data
+    data = yf.download(ticker, start=start_date, end=end_date)
+
+    # Check if data was successfully fetched
+    if data is None or data.empty:
+        flash("No stock data returned. Please check the ticker symbol or date range.", "danger")
+        return redirect(url_for('index'))
+
+    # Reset index so Date becomes a column and check for MultiIndex
+    data = data.reset_index()
+    print("Downloaded data:\n", data.head())  # For debugging
+    if isinstance(data.columns, pd.MultiIndex):
+        data.columns = data.columns.droplevel(1)
+
+
 
     # Add technical indicators
     data = model.add_technical_indicators(data)
