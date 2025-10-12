@@ -4,12 +4,6 @@ This Flask application allows users to register, log in, and utilize a stock pre
 
 ### Disclaimer: This project is for educational purposes only. Use it at your own risk. The data and predictions may not be accurate.
 
-# Stock Prediction Flask Application
-
-## Description
-
-This Flask application enables users to register, log in, and access a stock prediction feature powered by an LSTM neural network. The model forecasts future stock prices using historical data and sentiment analysis from news articles. The application integrates technical indicators, candlestick patterns, and a recommendation system to provide actionable insights. Interactive Plotly graphs visualize predictions, technical indicators, and historical data.
-
 ## Features
 
 - **User Authentication**: Secure registration and login system with password hashing using bcrypt.
