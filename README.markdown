@@ -1,4 +1,4 @@
-# Stock-Predictor
+# Predictive-Equity-Market-Analytics-and-Recommendation-System
 
 This Flask application allows users to register, log in, and utilize a stock prediction feature. The stock prediction model leverages an LSTM (Long Short-Term Memory) neural network to forecast future stock prices based on historical data and sentiment analysis. The application includes a recommendation system to guide users with actionable "Buy," "Hold," or "Sell" recommendations based on technical indicators, sentiment analysis, and predictive models.
 
